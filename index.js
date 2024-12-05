@@ -1,4 +1,4 @@
-let userName = ["Alice", "Bob","Charlie","Delta","Stephen"];
+let userName = ["Alice", "Bob","Charlie","Delta","John"];
 function signup(str){
     let filteredData = userName.filter((el,i)=> el==str);
     if(filteredData.length==0){
@@ -11,3 +11,18 @@ function signup(str){
 }
 signup("Meenu")
 //signup("Delta")
+function login(str, password){
+    let filteredData = userName.filter((el, i)=> el ==str);
+    if (filteredData.length==0){
+        
+        console.log("User Not Found...Please Signup");
+    }else{
+        if(password=="Emp@123"){
+            console.log("Login Sucessfull....");      
+        }else{
+            console.log("Wrong Password...");
+        }
+    }
+}
+login("Alice", "Emp@123");
+
